@@ -1,0 +1,174 @@
+/* Importar fonte do google fonts */
+@import url('https://fonts.googleapis.com/css2?family= Krona +One & display=swap');
+@import url('https://fonts.googleapis.com/css2?family= Montserrat & display=swap');
+
+/* Definando Variaveis para facilitar o projeto */
+:root {
+    --cor-primaria: #2C3639;
+    --cor-secundaria: #DCD7C9;
+    --cor-terciaria: #a08874;
+    --cor-hover: #3F4E4F;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+
+/* Para resetar o navegador das cfg padrão */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Ocupa o tamanho da pagina toda */
+    /* height: 100vh; */
+    /* ajusta o conteudo filho de acordo com o conteudo pai */
+    box-sizing: border-box;
+    /* Mudar a cor do fundo da pagina */
+    background-color: var(--cor-primaria);
+    /* Mudar a cor do texto */
+    color: var(--cor-secundaria);
+
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 50px;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.cabecalho__menu__link:hover {
+    color: var(--cor-hover);
+}
+
+.apresentacao {
+    /* da umar margin dos canto da tela */
+    padding: 5% 15%;
+    /* da flexibilidade para movimentar os itens dentro da div pai */
+    display: flex;
+    /* coloca os itens no centro da pagina */
+    align-items: center;
+    /* da uma espaçamento entre os elementos */
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    /* Lagura do conteudo */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    /* Tamanho da  fonte */
+    font-size: 2.25rem;
+    /* Pega a fonte importada do google fonts. */
+    font-family: var(--fonte-primaria);
+    color: var(--cor-terciaria);
+}
+
+/* utilizamos . para declarar uma classe */
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+
+.apresentacao__conteudo__texto {
+
+    /* Tamanho da  fonte */
+    font-size: 1.5rem;
+    /* Pega a fonte importada do google fonts. */
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    /* da flexibilidade para movimentar os itens dentro da div pai, que no caso é  os links */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    /* define a borda do botão, largura-espessura-cor */
+    border: 2px solid var(--cor-terciaria);
+    /* largura */
+    width: 50%;
+    /* arredonda a borda do botão */
+    border-radius: 8px;
+    /* Alinha o texto */
+    text-align: center;
+    /* tamanho da fonte, letra */
+    font-size: 1.5rem;
+    /* deixar a letra mais grossa */
+    font-weight: 600;
+    font-family: var(--fonte-secundaria);
+    /* espaçamento entre o conteudo e a borda */
+    padding: 21.5px 0;
+    /* retirar a linha em baixo da letra */
+    text-decoration: none;
+    color: var(--cor-secundaria);
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.rodape {
+    padding: 24px;
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* Aplicando responsividade */
+
+@media screen and (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
